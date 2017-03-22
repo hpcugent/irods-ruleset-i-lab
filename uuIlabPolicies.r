@@ -18,6 +18,8 @@ pep_resource_modified_post(*out) {
     }
     uuResourceModifiedPostRevision(*pluginInstanceName, *KVPairs);
   }
+  # see issue https://github.com/irods/irods/issues/3500 below on(true) code is a hack to avoid debug messages in irods 4.1.8
+  on(true) {nop;}
 }
 
 # \brief pep_resource_rename_post
@@ -28,6 +30,8 @@ pep_resource_rename_post(*out) {
     *KVPairs =  $KVPairs;
     uuResourceRenamePostResearch(*pluginInstanceName, *KVPairs);
   }
+  # see issue https://github.com/irods/irods/issues/3500 below on(true) code is a hack to avoid debug messages in irods 4.1.8
+  on(true) {nop;}
 }
 
 # \brief pep_resource_unregister_post   
@@ -38,6 +42,8 @@ pep_resource_unregistered_post(*out) {
 		*KVPairs = $KVPairs;
 		uuResourceUnregisteredPostResearch(*pluginInstanceName, *KVPairs);
 	}
+        # see issue https://github.com/irods/irods/issues/3500 below on(true) code is a hack to avoid debug messages in irods 4.1.8
+        on(true) {nop;}
 }
 
 #input null
