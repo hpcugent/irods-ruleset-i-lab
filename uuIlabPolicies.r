@@ -32,7 +32,7 @@ pep_resource_rename_post(*out) {
 
 # \brief pep_resource_unregister_post   
 # \param[in,out] out			This is a required parameter for Dynamic PEP's in 4.1.x releases. It is not used by this rule.
-pep_resource_unregister_post(*out) {
+pep_resource_unregistered_post(*out) {
 	on (uuinlist($pluginInstanceName, UUPRIMARYRESOURCES)) {
 		*pluginInstanceName = $pluginInstanceName;
 		*KVPairs = $KVPairs;
