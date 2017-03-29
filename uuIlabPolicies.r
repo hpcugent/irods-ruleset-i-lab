@@ -16,7 +16,8 @@ pep_resource_modified_post(*out) {
     if (*err < 0) {
     	writeLine("serverLog", "*err: *msg");
     }
-    uuResourceModifiedPostRevision(*pluginInstanceName, *KVPairs);
+    # Disable Revisions in production. 2017-03-29
+    # uuResourceModifiedPostRevision(*pluginInstanceName, *KVPairs);
   }
   # see issue https://github.com/irods/irods/issues/3500 below on(true) code is a hack to avoid debug messages in irods 4.1.8
   on(true) {nop;}
