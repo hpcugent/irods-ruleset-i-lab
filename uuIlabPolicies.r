@@ -16,7 +16,7 @@ pep_resource_modified_post(*out) {
     if (*err < 0) {
     	writeLine("serverLog", "*err: *msg");
     }
-    uuResourceModifiedPostRevision(*pluginInstanceName, *KVPairs.logical_path, UUMAXREVISIONSIZE, UUBLACKLIST); 
+    uuResourceModifiedPostRevision(*KVPairs.client_user_zone, *KVPairs.logical_path, UUMAXREVISIONSIZE, UUBLACKLIST); 
   }
   # see issue https://github.com/irods/irods/issues/3500 below on(true) code is a hack to avoid debug messages in irods 4.1.8
   on(true) {nop;}
